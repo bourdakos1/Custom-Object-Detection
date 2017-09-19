@@ -1,0 +1,27 @@
+<annotation>
+    <folder>less_selected</folder>
+    <filename>videoplayback0147.jpg</filename>
+    <size>
+        <width>1000</width>
+        <height>563</height>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>Tie Fighter</name>
+        <bndbox>
+            <xmin>945</xmin>
+            <ymin>216</ymin>
+            <xmax>1000</xmax>
+            <ymax>343</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>Tie Fighter</name>
+        <bndbox>
+            <xmin>144</xmin>
+            <ymin>340</ymin>
+            <xmax>190</xmax>
+            <ymax>384</ymax>
+        </bndbox>
+    </object>
+</annotation>

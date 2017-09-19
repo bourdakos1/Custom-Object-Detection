@@ -1,0 +1,36 @@
+<annotation>
+    <folder>less_selected</folder>
+    <filename>videoplayback4031.jpg</filename>
+    <size>
+        <width>1000</width>
+        <height>563</height>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>Tie Fighter</name>
+        <bndbox>
+            <xmin>902</xmin>
+            <ymin>289</ymin>
+            <xmax>1000</xmax>
+            <ymax>410</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>Tie Fighter</name>
+        <bndbox>
+            <xmin>698</xmin>
+            <ymin>245</ymin>
+            <xmax>818</xmax>
+            <ymax>360</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>Millennium Falcon</name>
+        <bndbox>
+            <xmin>219</xmin>
+            <ymin>74</ymin>
+            <xmax>454</xmax>
+            <ymax>472</ymax>
+        </bndbox>
+    </object>
+</annotation>

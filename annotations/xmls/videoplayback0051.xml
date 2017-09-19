@@ -1,0 +1,33 @@
+<annotation>
+    <folder>less_selected</folder>
+    <filename>videoplayback0051.jpg</filename>
+    <size>
+        <width>1000</width>
+        <height>563</height>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>Tie Fighter</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>157</xmin>
+            <ymin>165</ymin>
+            <xmax>166</xmax>
+            <ymax>176</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>Tie Fighter</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>136</xmin>
+            <ymin>151</ymin>
+            <xmax>145</xmax>
+            <ymax>160</ymax>
+        </bndbox>
+    </object>
+</annotation>

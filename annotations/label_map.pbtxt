@@ -1,0 +1,9 @@
+item {
+  id: 1
+  name: 'Millennium Falcon'
+}
+
+item {
+  id: 2
+  name: 'Tie Fighter'
+}

@@ -1,0 +1,18 @@
+<annotation>
+    <folder>less_selected</folder>
+    <filename>videoplayback3880.jpg</filename>
+    <size>
+        <width>1000</width>
+        <height>563</height>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>Millennium Falcon</name>
+        <bndbox>
+            <xmin>265</xmin>
+            <ymin>128</ymin>
+            <xmax>520</xmax>
+            <ymax>328</ymax>
+        </bndbox>
+    </object>
+</annotation>
