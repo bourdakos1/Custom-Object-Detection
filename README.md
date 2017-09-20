@@ -54,9 +54,9 @@ You need to collect a lot of images and you need to annotate them all. Annotatio
 
 For my Star Wars model I collected 308 images including 2–3 objects in each. I’d recommend trying to find 200–300 examples of each object.
 
-WOW, I have go through hundreds of images and write a bunch of xml for each one? Of course not! There are plenty of annotation tools out there.  I use RectLabel, but it’s only for macOS. It’s still a lot of work, trust me. It took me about  3–4 hours of nonstop work to annotate my entire dataset.
+WOW, I have go through hundreds of images and write a bunch of xml for each one? Of course not! There are plenty of annotation tools out there.  I use [RectLabel](https://rectlabel.com), but it’s only for macOS. It’s still a lot of work, trust me. It took me about 3–4 hours of nonstop work to annotate my entire dataset.
 
-If you are a person with money, you can just pay somebody else to do it, maybe an intern, or using something like Mechanical Turk. Otherwise, if you are a broke college student like me, and/or find doing hours of monotonous work fun, you’re on your own.
+If you are a person with money, you can just pay somebody else to do it, maybe an intern, or using something like [Mechanical Turk](https://www.mturk.com/mturk/welcome). Otherwise, if you are a broke college student like me, and/or find doing hours of monotonous work fun, you’re on your own.
 
 When creating annotations, if you don’t want to write your own conversion script, make sure they are exported as PASCAL VOC format. This is the format myself and many others use, so you can just steal my script. Which was stolen from someone else.
 
@@ -145,11 +145,11 @@ Once the script finishes running, you will end up with a `train.record` and a `v
 ## Downloading a Base Model
 Training an object detector from scratch can take days, even when using multiple GPUs! In order to speed up training, we’ll take an object detector trained on a different dataset, and reuse some of it’s parameters to initialize our new model.
 
-You can download a model from this model zoo. Each model varies in accuracy and speed. I used `faster_rcnn_resnet101_coco`.
+You can download a model from this [model zoo](https://github.com/bourdakos1/Custom-Object-Detection/blob/master/object_detection/g3doc/detection_model_zoo.md). Each model varies in accuracy and speed. I used `faster_rcnn_resnet101_coco`.
 
 Extract the files and move all the `model.ckpt` to our models directory.
 
-You should see a file named `faster_rcnn_resnet101.config`. It’s set to work with the `faster_rcnn_resnet101_coco model`. If you used another model, you can find a corresponding config file here.
+You should see a file named `faster_rcnn_resnet101.config`. It’s set to work with the `faster_rcnn_resnet101_coco model`. If you used another model, you can find a corresponding config file [here](https://github.com/bourdakos1/Custom-Object-Detection/tree/master/object_detection/samples/configs).
 
 ## Ready to Train
 Run the following script and it should start to train!
@@ -218,13 +218,13 @@ For this project, I definitely didn’t need those kind of resources, for I am n
 ### Creating a Nimbix Account
 Nimbix provides developers a trial account that provides 10 hours of free processing time on the PowerAI platform.
 
-You can register here.
+You can register [here](https://www.nimbix.net/cognitive-journey/).
 
 **Note:** This process is not automated so it may take up to 24 hours to be reviewed and approved.
 
 Once approved, you should receive an email with instructions on confirming and creating your account. It will ask you for a “Promotional Code”, but leave it blank.
 
-You should now be able to log in here.
+You should now be able to log in [here](https://mc.jarvice.com).
 
 ### Deploy the PowerAI Notebooks Application
 Start by searching for `PowerAI Notebooks`.
