@@ -344,7 +344,5 @@ It will run your object detection model found at `output_inference_graph/frozen_
 # Results
 Here’s what we get when we run our model over all the frames in this clip from Star Wars: The Force Awakens.
 
-
-
-
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
 
