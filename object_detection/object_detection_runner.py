@@ -7,6 +7,7 @@ import tensorflow as tf
 import zipfile
 import json
 import time
+import glob
 
 from io import StringIO
 from PIL import Image
@@ -14,15 +15,19 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 from utils import visualization_utils as vis_util
+from utils import label_map_util
 
 from multiprocessing.dummy import Pool as ThreadPool
 
 MAX_NUMBER_OF_BOXES = 10
 MINIMUM_CONFIDENCE = 0.9
 
-CATEGORY_INDEX = {}
-CATEGORY_INDEX[1] = {'id': 1, 'name': 'Millenium Falcon'}
-CATEGORY_INDEX[2] = {'id': 2, 'name': 'Tie Fighter'}
+PATH_TO_LABELS = 'annotations/label_map.pbtxt'
+PATH_TO_TEST_IMAGES_DIR = 'test_images'
+
+label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
+categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=sys.maxsize, use_display_name=True)
+CATEGORY_INDEX = label_map_util.create_category_index(categories)
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 MODEL_NAME = 'output_inference_graph'
@@ -59,9 +64,8 @@ def detect_objects(image_path):
     plt.savefig('output/{}'.format(image_path), dpi = 62)
     plt.close(fig)
 
-PATH_TO_TEST_IMAGES_DIR = 'test_images'
-# First 3 images.
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image-{}.jpg'.format(i)) for i in range(1, 4) ]
+# TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image-{}.jpg'.format(i)) for i in range(1, 4) ]
+TEST_IMAGE_PATHS = glob.glob(os.path.join(PATH_TO_TEST_IMAGES_DIR, '*.jpg'))
 
 # Load model into memory
 print('Loading model...')
