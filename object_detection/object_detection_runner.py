@@ -25,7 +25,7 @@ CATEGORY_INDEX[1] = {'id': 1, 'name': 'Millenium Falcon'}
 CATEGORY_INDEX[2] = {'id': 2, 'name': 'Tie Fighter'}
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
-MODEL_NAME = 'star_wars'
+MODEL_NAME = 'output_inference_graph'
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 def load_image_into_numpy_array(image):
