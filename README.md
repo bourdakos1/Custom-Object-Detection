@@ -18,7 +18,7 @@ If you wanted to do something like logo detection or detect something not on thi
 
 Training your own model is a lot of work.
 
-At this point, if you’re thinking, “WHOAH WHOAH WHOAH! I don’t want to do a lot of work!” You might want to check out my other article about using the provided model, it’s a much smoother ride.
+At this point, if you’re thinking, “WHOAH WHOAH WHOAH! I don’t want to do a lot of work!” You might want to check out [my other article](https://medium.com/unsupervised-coding/dont-miss-your-target-object-detection-with-tensorflow-and-watson-488e24226ef3) about using the provided model, it’s a much smoother ride.
 
 You need to collect a lot of images and you need to annotate them all. Annotation includes, specifying the object coordinates and a corresponding label. An annotation for an image with 2 Tie Fighters might look something like this:
 
