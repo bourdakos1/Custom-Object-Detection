@@ -260,6 +260,8 @@ You should be greeted with a familiar face:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*XoGutc6f2nEC4lxexRO1Rw.png)
 
+**Note:** Terminal may not work in Safari.
+
 The steps for training are the same as they were when we ran this locally. If you’re using my training data then you can just clone my repo by running (If not, just clone your own repo):
 
 ```
