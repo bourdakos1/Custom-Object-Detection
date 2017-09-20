@@ -1,6 +1,6 @@
 # Custom Object Detection with TensorFlow
 
-![](https://cdn-images-1.medium.com/max/1600/1*VBUJnaBvkBtsJzcNPeoeeg.gif)
+![](screenshot/starwars_small.gif)
 
 At the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
 
@@ -344,5 +344,5 @@ It will run your object detection model found at `output_inference_graph/frozen_
 # Results
 Here’s what we get when we run our model over all the frames in this clip from Star Wars: The Force Awakens.
 
-[![Watch the video](https://img.youtube.com/vi/xW2hpkoaIiM/0.jpg)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
+[![Watch the video](screenshots/youtube.png)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
 
