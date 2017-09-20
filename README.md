@@ -1,6 +1,6 @@
 # Custom Object Detection with TensorFlow
 
-![](screenshot/starwars_small.gif)
+![](screenshots/starwars_small.gif)
 
 At the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
 
