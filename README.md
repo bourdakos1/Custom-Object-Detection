@@ -1,18 +1,18 @@
 # Custom Object Detection with TensorFlow
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*VBUJnaBvkBtsJzcNPeoeeg.gif)
 
 At the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
 
 The following images were both tagged using the same Watson visual recognition default classifier. Although, the first one has been run through an object detection model first.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*uCdxGFAuHpEwCmZ3iOIUaw.png)
 
 You can clearly see how object detection can be far more superior than visual recognition on it’s own, but if you want object detection you’re going to have to get your hands a little dirty.
 
 Depending on your use case, you may not need a custom object detection model. TensorFlow’s object detection API provides a few models, of varying speed and accuracy, that are based on the COCO dataset. For your convenience, I have put together a complete list of objects that are detectable with the COCO models.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*ka9VwFe4x7fGQ61WNGX8fQ.png)
 
 If you wanted to do something like logo detection or detect something not on this list, you’d have to build your own custom object detector. I wanted to be able to detect the Millennium Falcon and some Tie Fighters. This is obviously an extremely important usecase, because you never know…
 
@@ -229,15 +229,15 @@ You should now be able to log in here.
 ### Deploy the PowerAI Notebooks Application
 Start by searching for `PowerAI Notebooks`.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*X41PZafFtX055NnbwBacEg.png)
 
 Click on it and then choose `TensorFlow`.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*rFh7QVFGs_QzELReRFyAxQ.png)
 
 Choose the machine type of `32 thread POWER8, 128GB RAM, 1x P100 GPU w/NVLink (np8g1)`.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*I0ycKwK54z2MdSbuma05vg.png)
 
 Once started, the following dashboard panel will be displayed. When the server `Status` turns to `Processing`, the server is ready to be accessed.
 
@@ -245,20 +245,20 @@ Get the password by clicking on `(click to show)`.
 
 Then, click `Click here to connect` to launch the Notebook.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*JLWTTJT4rUmxLN69lKdFaA.png)
 
 Log-in using the user name `nimbix` and the previously supplied password.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*wXLlUuNvo_qPO-_p4kfjKA.png)
 
 ### Start Training
 Get a new terminal window by clicking on the `New` pull-down and selecting `Terminal`.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*j8z6DLJgjyvH13-KXfMajQ.png)
 
 You should be greeted with a familiar face:
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*XoGutc6f2nEC4lxexRO1Rw.png)
 
 The steps for training are the same as they were when we ran this locally. If you’re using my training data then you can just clone my repo by running (If not, just clone your own repo):
 
@@ -309,7 +309,7 @@ Download all the model.ckpt files with the highest number.
 
 **Note:** You can only download one at a time.
 
-![](screenshots/x.png)
+![](https://cdn-images-1.medium.com/max/1600/1*2NUyMsF4SoVv1Jm0zMwc8Q.png)
 
 **Note:** Be sure to click the red power button on your machine when finished. Otherwise, the clock will keep on ticking indefinitely.
 
