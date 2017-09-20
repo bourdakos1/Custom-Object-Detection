@@ -1,15 +1,29 @@
 # Custom Object Detection with TensorFlow
----
 
-Object Detection isn’t Scary: How to Build a Custom Detector with TensorFlow
-Custom Object Detector in ActionAt the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
+
+Custom Object Detector in Action
+
+At the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
+
 The following images were both tagged using the same Watson visual recognition default classifier. Although, the first one has been run through an object detection model first.
+
+![](screenshots/x.png)
+
 You can clearly see how object detection can be far more superior than visual recognition on it’s own, but if you want object detection you’re going to have to get your hands a little dirty.
+
 Depending on your use case, you may not need a custom object detection model. TensorFlow’s object detection API provides a few models, of varying speed and accuracy, that are based on the COCO dataset. For your convenience, I have put together a complete list of objects that are detectable with the COCO models.
+
+![](screenshots/x.png)
+
 If you wanted to do something like logo detection or detect something not on this list, you’d have to build your own custom object detector. I wanted to be able to detect the Millennium Falcon and some Tie Fighters. This is obviously an extremely important usecase, because you never know…
+
 Training your own model is a lot of work.
+
 At this point, if you’re thinking, “WHOAH WHOAH WHOAH! I don’t want to do a lot of work!” You might want to check out my other article about using the provided model, it’s a much smoother ride.
+
 You need to collect a lot of images and you need to annotate them all. Annotation includes, specifying the object coordinates and a corresponding label. An annotation for an image with 2 Tie Fighters might look something like this:
+
+```xml
 <annotation>
     <folder>images</folder>
     <filename>image1.jpg</filename>
@@ -37,13 +51,23 @@ You need to collect a lot of images and you need to annotate them all. Annotatio
         </bndbox>
     </object>
 </annotation>
+```
+
 For my Star Wars model I collected 308 images including 2–3 objects in each. I’d recommend trying to find 200–300 examples of each object.
+
 WOW, I have go through hundreds of images and write a bunch of xml for each one? Of course not! There are plenty of annotation tools out there.  I use RectLabel, but it’s only for macOS. It’s still a lot of work, trust me. It took me about  3–4 hours of nonstop work to annotate my entire dataset.
+
 If you are a person with money, you can just pay somebody else to do it, maybe an intern, or using something like Mechanical Turk. Otherwise, if you are a broke college student like me, and/or find doing hours of monotonous work fun, you’re on your own.
+
 When creating annotations, if you don’t want to write your own conversion script, make sure they are exported as PASCAL VOC format. This is the format myself and many others use, so you can just steal my script. Which was stolen from someone else.
+
 We will need to do a little set up before we can run the script to prepare the data for TensorFlow.
-Start by cloning my repo here.
+
+Start by cloning this repo.
+
 The directory structure will need to look like this:
+
+```
 models
 |-- annotations
 |   |-- label_map.pbtxt
@@ -61,14 +85,25 @@ models
 |-- object_detection
 |   `-- ...
 `-- ...
-I’ve included my training data so you should be able to run this out of the box, but if you want to create a model with your own data you will need to add your training images to images, add your xml annotations to annotations/xmls, update trainval.txt, and label_map.pbtxt.
+```
+
+I’ve included my training data so you should be able to run this out of the box, but if you want to create a model with your own data you will need to add your training images to `images`, add your xml annotations to `annotations/xmls`, update `trainval.txt`, and `label_map.pbtxt`.
+
 trainval.txt is a list of file names that allows us to find and correlate the jpg and xml files. The following trainval.txt list:
+
+```
 abc
 123
 xyz
-Would let us to find abc.jpg, abc.xml, 123.jpg, 123.xml, xyz.jpg and xyz.xml.
-Note: Make sure your jpg and xml file names match, minus the extension.
-label_map.pbtxt is our list of objects that we are trying to detect. It should look something like this:
+```
+
+Would let us to find `abc.jpg`, `abc.xml`, `123.jpg`, `123.xml`, `xyz.jpg` and `xyz.xml`.
+
+**Note:** Make sure your jpg and xml file names match, minus the extension.
+
+`label_map.pbtxt` is our list of objects that we are trying to detect. It should look something like this:
+
+```
 item {
   id: 1
   name: 'Millennium Falcon'
@@ -77,7 +112,10 @@ item {
   id: 2
   name: 'Tie Fighter'
 }
-Running the Script
+```
+
+## Running the Script
+
 First, with python and pip installed, install the scripts requirements:
 pip install -r requirements.txt
 Then you must to compile the Protobuf libraries:
@@ -195,7 +233,3 @@ Here’s what we get when we run our model over all the frames in this clip from
 
 
 
----
-
-Thanks for reading! If you have any questions, feel free to reach out at bourdakos1@gmail.com, connect with me on LinkedIn, or follow me here on Medium.
-If you found this article helpful, it would mean a lot if you gave me some claps👏 and shared with friends.
