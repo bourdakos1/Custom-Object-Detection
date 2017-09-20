@@ -328,7 +328,7 @@ python object_detection/export_inference_graph.py \
         --output_directory output_inference_graph
 ```
 
-_Remember `export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim`_
+_Remember `export PYTHONPATH=$PYTHONPATH:``pwd``:``pwd``/slim`_
 
 You should see a new `output_inference_graph` directory with a `frozen_inference_graph.pb` file. This is the file we need.
 
