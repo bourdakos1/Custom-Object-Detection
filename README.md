@@ -1,6 +1,6 @@
 # Custom Object Detection with TensorFlow
 
-![](https://cdn-images-1.medium.com/max/1600/1*VBUJnaBvkBtsJzcNPeoeeg.gif)
+![](screenshots/starwars_small.gif)
 
 At the time of writing this post most of the big companies (IBM, Google, Microsoft, and Amazon) all have fairly easy to use visual recognition APIs. There are also some smaller companies that offer similar offerings as well, such as Clarifai. However, none of them offer object detection!
 
@@ -18,7 +18,7 @@ If you wanted to do something like logo detection or detect something not on thi
 
 Training your own model is a lot of work.
 
-At this point, if you’re thinking, “WHOAH WHOAH WHOAH! I don’t want to do a lot of work!” You might want to check out my other article about using the provided model, it’s a much smoother ride.
+At this point, if you’re thinking, “WHOAH WHOAH WHOAH! I don’t want to do a lot of work!” You might want to check out [my other article](https://medium.com/unsupervised-coding/dont-miss-your-target-object-detection-with-tensorflow-and-watson-488e24226ef3) about using the provided model, it’s a much smoother ride.
 
 You need to collect a lot of images and you need to annotate them all. Annotation includes, specifying the object coordinates and a corresponding label. An annotation for an image with 2 Tie Fighters might look something like this:
 
@@ -54,9 +54,9 @@ You need to collect a lot of images and you need to annotate them all. Annotatio
 
 For my Star Wars model I collected 308 images including 2–3 objects in each. I’d recommend trying to find 200–300 examples of each object.
 
-WOW, I have go through hundreds of images and write a bunch of xml for each one? Of course not! There are plenty of annotation tools out there.  I use RectLabel, but it’s only for macOS. It’s still a lot of work, trust me. It took me about  3–4 hours of nonstop work to annotate my entire dataset.
+WOW, I have go through hundreds of images and write a bunch of xml for each one? Of course not! There are plenty of annotation tools out there.  I use [RectLabel](https://rectlabel.com), but it’s only for macOS. It’s still a lot of work, trust me. It took me about 3–4 hours of nonstop work to annotate my entire dataset.
 
-If you are a person with money, you can just pay somebody else to do it, maybe an intern, or using something like Mechanical Turk. Otherwise, if you are a broke college student like me, and/or find doing hours of monotonous work fun, you’re on your own.
+If you are a person with money, you can just pay somebody else to do it, maybe an intern, or using something like [Mechanical Turk](https://www.mturk.com/mturk/welcome). Otherwise, if you are a broke college student like me, and/or find doing hours of monotonous work fun, you’re on your own.
 
 When creating annotations, if you don’t want to write your own conversion script, make sure they are exported as PASCAL VOC format. This is the format myself and many others use, so you can just steal my script. Which was stolen from someone else.
 
@@ -145,11 +145,11 @@ Once the script finishes running, you will end up with a `train.record` and a `v
 ## Downloading a Base Model
 Training an object detector from scratch can take days, even when using multiple GPUs! In order to speed up training, we’ll take an object detector trained on a different dataset, and reuse some of it’s parameters to initialize our new model.
 
-You can download a model from this model zoo. Each model varies in accuracy and speed. I used `faster_rcnn_resnet101_coco`.
+You can download a model from this [model zoo](https://github.com/bourdakos1/Custom-Object-Detection/blob/master/object_detection/g3doc/detection_model_zoo.md). Each model varies in accuracy and speed. I used `faster_rcnn_resnet101_coco`.
 
 Extract the files and move all the `model.ckpt` to our models directory.
 
-You should see a file named `faster_rcnn_resnet101.config`. It’s set to work with the `faster_rcnn_resnet101_coco model`. If you used another model, you can find a corresponding config file here.
+You should see a file named `faster_rcnn_resnet101.config`. It’s set to work with the `faster_rcnn_resnet101_coco model`. If you used another model, you can find a corresponding config file [here](https://github.com/bourdakos1/Custom-Object-Detection/tree/master/object_detection/samples/configs).
 
 ## Ready to Train
 Run the following script and it should start to train!
@@ -218,13 +218,13 @@ For this project, I definitely didn’t need those kind of resources, for I am n
 ### Creating a Nimbix Account
 Nimbix provides developers a trial account that provides 10 hours of free processing time on the PowerAI platform.
 
-You can register here.
+You can register [here](https://www.nimbix.net/cognitive-journey/).
 
 **Note:** This process is not automated so it may take up to 24 hours to be reviewed and approved.
 
 Once approved, you should receive an email with instructions on confirming and creating your account. It will ask you for a “Promotional Code”, but leave it blank.
 
-You should now be able to log in here.
+You should now be able to log in [here](https://mc.jarvice.com).
 
 ### Deploy the PowerAI Notebooks Application
 Start by searching for `PowerAI Notebooks`.
@@ -259,6 +259,8 @@ Get a new terminal window by clicking on the `New` pull-down and selecting `Term
 You should be greeted with a familiar face:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*XoGutc6f2nEC4lxexRO1Rw.png)
+
+**Note:** Terminal may not work in Safari.
 
 The steps for training are the same as they were when we ran this locally. If you’re using my training data then you can just clone my repo by running (If not, just clone your own repo):
 
@@ -344,5 +346,5 @@ It will run your object detection model found at `output_inference_graph/frozen_
 # Results
 Here’s what we get when we run our model over all the frames in this clip from Star Wars: The Force Awakens.
 
-[![Watch the video](https://img.youtube.com/vi/xW2hpkoaIiM/0.jpg)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
+[![Watch the video](screenshots/youtube.png)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
 
