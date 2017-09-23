@@ -92,3 +92,7 @@ Here’s what I got from running my model over all the frames in this clip from 
 
 [![Watch the video](screenshots/youtube.png)](https://www.youtube.com/watch?v=xW2hpkoaIiM)
 
+## License
+
+MIT © Nick Bourdakos
+
