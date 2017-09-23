@@ -2,7 +2,7 @@
 
 ![](screenshots/starwars_small.gif)
 
-## Installation Instructions
+## Installation
 
 First, with python and pip installed, install the scripts requirements:
 
@@ -95,4 +95,3 @@ Here’s what I got from running my model over all the frames in this clip from 
 ## License
 
 MIT © Nick Bourdakos
-
