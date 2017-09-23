@@ -160,9 +160,9 @@ I recommend downloading your model every ~5k steps and evaluate, to make sure yo
 Click on the `Jupyter` logo in the top left corner. Then, navigate the file tree to `Custom-Object-Detection/train`.
 
 Download all the model.ckpt files with the highest number.
-*. `model.ckpt-STEP_NUMBER.data-00000-of-00001`
-*. `model.ckpt-STEP_NUMBER.index`
-*. `model.ckpt-STEP_NUMBER.meta`
+- `model.ckpt-STEP_NUMBER.data-00000-of-00001`
+- `model.ckpt-STEP_NUMBER.index`
+- `model.ckpt-STEP_NUMBER.meta`
 
 **Note:** You can only download one at a time.
 
