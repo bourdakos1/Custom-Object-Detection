@@ -62,9 +62,9 @@ I recommend testing your model every ~5k steps to make sure you’re on the righ
 You can find checkpoints for your model in `Custom-Object-Detection/train`.
 
 Move the model.ckpt files with the highest number to the root of the repo:
-*.  `model.ckpt-STEP_NUMBER.data-00000-of-00001`
-*.  `model.ckpt-STEP_NUMBER.index`
-*.  `model.ckpt-STEP_NUMBER.meta`
+- `model.ckpt-STEP_NUMBER.data-00000-of-00001`
+- `model.ckpt-STEP_NUMBER.index`
+- `model.ckpt-STEP_NUMBER.meta`
 
 In order to use the model, you first need to convert the checkpoint files (`model.ckpt-STEP_NUMBER.*`) into a frozen inference graph by running this command:
 
