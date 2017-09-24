@@ -95,4 +95,6 @@ Here’s what I got from running my model over all the frames in this clip from 
 
 ## License
 
-MIT © Nick Bourdakos
+## License
+
+[MIT](LICENSE)
