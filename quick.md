@@ -21,7 +21,7 @@ Add `models` and `models/slim` to your `PYTHONPATH`:
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
-**IMPORTANT NOTE:** This must be ran every time you open terminal, or added to your `~/.bashrc` file.
+_**Note:** This must be ran every time you open terminal, or added to your `~/.bashrc` file._
 
 
 ## Usage
@@ -41,7 +41,7 @@ You can find models to download from this [model zoo](https://github.com/bourdak
 
 Extract the files and move all the `model.ckpt` to our models directory.
 
-**Note:** If you don't use `faster_rcnn_resnet101_coco`, replace `faster_rcnn_resnet101.config` with the corresponding [config file](https://github.com/bourdakos1/Custom-Object-Detection/tree/master/object_detection/samples/configs).
+_**Note:** If you don't use `faster_rcnn_resnet101_coco`, replace `faster_rcnn_resnet101.config` with the corresponding [config file](https://github.com/bourdakos1/Custom-Object-Detection/tree/master/object_detection/samples/configs)._
 
 ### 3) Train the Model
 Run the following script to train the model:
@@ -56,7 +56,7 @@ python object_detection/train.py \
 ### 4) Export the Inference Graph
 When you model is ready depends on your training data, the more data, the more steps you’ll need. My model was pretty solid at ~4.5k steps. Then, at about ~20k steps, it peaked. I even went on and trained it for 200k steps, but it didn’t get any better.
 
-**Note:** If training takes way to long, [read this](https://medium.com/@nickbourdakos/object-detection-isnt-scary-how-to-build-a-custom-detector-with-tensorflow-c8c86419225e).
+> **Note:** If training takes way to long, [read this](https://medium.com/@nickbourdakos/object-detection-isnt-scary-how-to-build-a-custom-detector-with-tensorflow-c8c86419225e).
 
 I recommend testing your model every ~5k steps to make sure you’re on the right path.
 
