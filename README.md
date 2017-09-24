@@ -1,6 +1,10 @@
-# Custom Object Detection with TensorFlow
-
 ![](screenshots/starwars_small.gif)
+
+# Custom Object Detection with TensorFlow
+Custom object detection allows you to recognize, detect, and localize multiple objects within an image. It helps us get a better understanding of the image as a whole as aposed to just visual recognition.
+
+**Why Object Detection?**
+![](https://cdn-images-1.medium.com/max/1600/1*uCdxGFAuHpEwCmZ3iOIUaw.png)
 
 ## Installation
 
