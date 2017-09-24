@@ -1,4 +1,4 @@
-![](screenshots/starwars_small.gif)
+![](screenshots/starwars_small.gif width=100%)
 
 <img src=screenshots/starwars_small.gif width=100% />
 
