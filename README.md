@@ -6,18 +6,18 @@
 
 First, with python and pip installed, install the scripts requirements:
 
-```
+```bash
 pip install -r requirements.txt
 ```
 Then you must compile the Protobuf libraries:
 
-```
+```bash
 protoc object_detection/protos/*.proto --python_out=.
 ```
 
 Add `models` and `models/slim` to your `PYTHONPATH`:
 
-```
+```bash
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
@@ -28,7 +28,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ### 1) Create the TensorFlow Records
 Run the script:
 
-```
+```bash
 python object_detection/create_tf_record.py
 ```
 
@@ -46,7 +46,7 @@ Extract the files and move all the `model.ckpt` to our models directory.
 ### 3) Train the Model
 Run the following script to train the model:
 
-```
+```bash
 python object_detection/train.py \
         --logtostderr \
         --train_dir=train \
@@ -69,7 +69,7 @@ Move the model.ckpt files with the highest number to the root of the repo:
 
 In order to use the model, you first need to convert the checkpoint files (`model.ckpt-STEP_NUMBER.*`) into a frozen inference graph by running this command:
 
-```
+```bash
 python object_detection/export_inference_graph.py \
         --input_type image_tensor \
         --pipeline_config_path faster_rcnn_resnet101.config \
@@ -82,7 +82,7 @@ You should see a new `output_inference_graph` directory with a `frozen_inference
 ### 5) Test the Model
 Just run the following command:
 
-```
+```bash
 python object_detection/object_detection_runner.py
 ```
 
