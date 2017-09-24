@@ -95,6 +95,4 @@ Here’s what I got from running my model over all the frames in this clip from 
 
 ## License
 
-## License
-
 [MIT](LICENSE)
