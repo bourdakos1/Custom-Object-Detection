@@ -3,3 +3,4 @@ pillow
 lxml
 jupyter
 matplotlib
+protobuf
