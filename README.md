@@ -60,7 +60,7 @@ python object_detection/train.py \
 ### 4) Export the Inference Graph
 When you model is ready depends on your training data, the more data, the more steps you’ll need. My model was pretty solid at ~4.5k steps. Then, at about ~20k steps, it peaked. I even went on and trained it for 200k steps, but it didn’t get any better.
 
->_**Note:** If training takes way to long, [read this](https://medium.com/@nickbourdakos/object-detection-isnt-scary-how-to-build-a-custom-detector-with-tensorflow-c8c86419225e)._
+>_**Note:** If training takes way to long, [read this](https://medium.freecodecamp.org/tracking-the-millenium-falcon-with-tensorflow-c8c86419225e)._
 
 I recommend testing your model every ~5k steps to make sure you’re on the right path.
 
