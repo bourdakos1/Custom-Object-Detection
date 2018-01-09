@@ -60,7 +60,7 @@ def detect_objects(image_path):
     ax.set_axis_off()
     fig.add_axes(ax)
 
-    plt.imshow(image_np, aspect = 'normal')
+    plt.imshow(image_np, aspect = 'auto')
     plt.savefig('output/{}'.format(image_path), dpi = 62)
     plt.close(fig)
 
