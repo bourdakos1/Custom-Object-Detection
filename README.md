@@ -58,7 +58,7 @@ python object_detection/train.py \
 ```
 
 ### 4) Export the Inference Graph
-When you model is ready depends on your training data, the more data, the more steps you’ll need. My model was pretty solid at ~4.5k steps. Then, at about ~20k steps, it peaked. I even went on and trained it for 200k steps, but it didn’t get any better.
+The training time is dependent on the amount of training data. My model was pretty solid at ~4.5k steps. The loss reached a minimum at ~20k steps. I let it train for 200k steps, but there wasn't much improvement.
 
 >_**Note:** If training takes way to long, [read this](https://medium.freecodecamp.org/tracking-the-millenium-falcon-with-tensorflow-c8c86419225e)._
 
