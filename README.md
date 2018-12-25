@@ -16,7 +16,7 @@ pip install -r requirements.txt
 Then you must compile the Protobuf libraries:
 
 ```bash
-protoc object_detection/protos/*.proto --python_out=.
+python protoc_compiller.py
 ```
 
 Add `models` and `models/slim` to your `PYTHONPATH`:
