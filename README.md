@@ -1,3 +1,6 @@
+# We're moving!
+### - check out [github.com/cloud-annotations/training](https://github.com/cloud-annotations/training/)
+
 <img src=screenshots/starwars_small.gif width=100% />
 
 # Custom Object Detection with TensorFlow
