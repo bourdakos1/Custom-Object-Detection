@@ -1,5 +1,0 @@
-tensorflow
-pillow
-lxml
-jupyter
-matplotlib
